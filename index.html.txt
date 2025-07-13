@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SLATT Merch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SLATT 🩸</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Lookbook</a>
+      <a href="#">Track Order</a>
+    </nav>
+  </header>
+
+  <section class="announcement">
+    <p>🔥 SLATT New Edition Available 🔥</p>
+  </section>
+
+  <main>
+    <h2>Products</h2>
+    <div class="product-grid">
+
+      <!-- T-Shirts -->
+      <div class="product-card">
+        <img src="images/black_ts.png" alt="Black T-shirt" />
+        <h3>SLATT Black T-shirt</h3>
+        <p>₦30,000 (Thick) / ₦20,000 (Light)</p>
+        <select id="size-black-ts">
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>XL</option>
+        </select>
+        <button onclick="addToCart('Black T-shirt (Thick)', 30000, 'size-black-ts')">Add Thick</button>
+        <button onclick="addToCart('Black T-shirt (Light)', 20000, 'size-black-ts')">Add Light</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/white_ts.png" alt="White T-shirt" />
+        <h3>SLATT White T-shirt</h3>
+        <p>₦30,000 (Thick) / ₦20,000 (Light)</p>
+        <select id="size-white-ts">
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>XL</option>
+        </select>
+        <button onclick="addToCart('White T-shirt (Thick)', 30000, 'size-white-ts')">Add Thick</button>
+        <button onclick="addToCart('White T-shirt (Light)', 20000, 'size-white-ts')">Add Light</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/red_ts.png" alt="Red T-shirt" />
+        <h3>SLATT Red T-shirt</h3>
+        <p>₦30,000 (Thick) / ₦20,000 (Light)</p>
+        <select id="size-red-ts">
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>XL</option>
+        </select>
+        <button onclick="addToCart('Red T-shirt (Thick)', 30000, 'size-red-ts')">Add Thick</button>
+        <button onclick="addToCart('Red T-shirt (Light)', 20000, 'size-red-ts')">Add Light</button>
+      </div>
+
+      <!-- Sweatpants -->
+      <div class="product-card">
+        <img src="images/black_sweatpants.png" alt="SLATT Sweatpants" />
+        <h3>SLATT Sweatpants</h3>
+        <p>₦30,000</p>
+        <select id="size-sweatpants">
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>XL</option>
+        </select>
+        <button onclick="addToCart('Sweatpants', 30000, 'size-sweatpants')">Add to Cart</button>
+      </div>
+
+      <!-- Caps -->
+      <div class="product-card">
+        <img src="images/white_cap.png" alt="White Cap" />
+        <h3>SLATT White Cap</h3>
+        <p>₦13,000</p>
+        <button onclick="addToCart('White Cap', 13000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/black_cap.png" alt="Black Cap" />
+        <h3>SLATT Black Cap</h3>
+        <p>₦10,000</p>
+        <button onclick="addToCart('Black Cap', 10000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/red_cap.png" alt="Red Cap" />
+        <h3>SLATT Red Cap</h3>
+        <p>₦9,500</p>
+        <button onclick="addToCart('Red Cap', 9500)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Size Guide -->
+    <section class="size-guide">
+      <h3>📏 Size Guide</h3>
+      <table>
+        <tr><th>Size</th><th>Chest Width</th><th>Shirt Length</th></tr>
+        <tr><td>Small</td><td>46 cm</td><td>68 cm</td></tr>
+        <tr><td>Medium</td><td>51 cm</td><td>71 cm</td></tr>
+        <tr><td>Large</td><td>56 cm</td><td>74 cm</td></tr>
+        <tr><td>XL</td><td>61 cm</td><td>76 cm</td></tr>
+      </table>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <ul id="cart-list"></ul>
+      <p>Total: ₦<span id="cart-total">0</span></p>
+    </section>
+
+    <!-- Checkout -->
+    <section class="checkout-form">
+      <h2>Checkout</h2>
+      <form onsubmit="submitOrder(event)">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Phone Number" required />
+        <textarea placeholder="Delivery Address" required></textarea>
+        <input type="text" placeholder="Payment Reference or Screenshot Link" required />
+        <button type="submit">Confirm Order</button>
+      </form>
+      <p>Order details will be manually confirmed via WhatsApp or Email.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>SLATT Contact & Socials</h3>
+    <p>Email: slattmerch0@gmail.com</p>
+    <p>WhatsApp: +2349113755607, +2349063243756</p>
+    <p>TikTok: @slatt_merch | Snapchat: @slatt_merch</p>
+    <p>&copy; 2025 SLATT Merch. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
