@@ -1,0 +1,88 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background: #121212;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.announcement {
+  background: crimson;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.product-card select {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  background: #fff;
+  color: #000;
+}
+
+button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.size-guide, .cart-section, .checkout-form {
+  padding: 2rem;
+  background: #1c1c1c;
+}
+
+.size-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.size-guide th, td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+}
+
+.checkout-form input, .checkout-form textarea {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
